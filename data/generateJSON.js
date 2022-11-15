@@ -22,4 +22,5 @@ collegeArray.forEach(function(college) {
   }
 });
 
+
 fs.writeFileSync('colleges.json', JSON.stringify(collegesObject), 'utf8');//generates JSON file
