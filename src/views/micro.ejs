@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <title><%=name%></title>
   <meta name="author" content="You">
-  <meta name="description" content="A compendium of Harry Potter characters">
+  <meta name="description" content="A compendium of unnamed colleges">
   <meta content="text/html" http-equiv="Content-type" />
   <meta content="width=device-width, initial-scale=1" name="viewport" />
   <link rel="stylesheet" href="styles.css">
@@ -18,9 +18,14 @@
   <section id="charcter-stats">
   <h2>Stats</h2>
   <ul>
-    <li>Gender: <%=stats.gender%></li>
-    <li>House: <%=stats.house%></li>
-    <li>Species: <%=stats.species%></li>
+    <li>Applications: <%=stats.apps%></li>
+    <li>Acceptances: <%=stats.accept%></li>
+    <li>Students Enrolled: <%=stats.enroll%></li>
+    <li>Percent of students from top 25% of HS class: <%=stats.top25perc%></li>
+    <li>Percent of faculty with phd's: <%=stats.phd%></li>
+    <li>Student faculty ratio: <%=stats.s_f_ratio%></li>
+    <li>Instructional expenditure per student: <%=stats.expend%></li>
+    <li>Graduation Rate: <%=stats.grad_rate%></li>
     <li>Skill:
       <% if (stats.skills && stats.skills.length > 0){ %>
       <ol>
