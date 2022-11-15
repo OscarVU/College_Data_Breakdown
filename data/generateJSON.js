@@ -1,29 +1,25 @@
 const fs = require('fs');//includes the library in your code
 
-let characters = {};
+let collegesObject = {};
 
-let peeps_csv = fs.readFileSync('Characters.csv', 'utf8');
+let colleges_csv = fs.readFileSync('college_data.csv', 'utf8');
 
-let peeps = peeps_csv.split("\n");
+let collegeArray = colleges_csv.split("\n");
 
-peeps.forEach(function(peep) {
-  let character_info = peep.split(';');
+collegeArray.forEach(function(college) {
+  let college_info_array = college.split(';');
 
-  let character_name = character_info[1];
+  let college_ID = college_info_array[0];
   //adding object values
-  if(character_name!="Name"){
-    let characterStats = {};
-    characterStats['gender'] = character_info[2];
-    characterStats['house'] = character_info[4];
-    characterStats['species'] = character_info[7];
-    if (character_info[12])
-      characterStats['skills'] = character_info[12].split('|');
-    else {
-      characterStats['skills'] = [];
-    }
+  if(college_ID != "name"){
 
-    characters[character_name]=characterStats;
+    let idvCollegeStats = [];
+    //indvCollegeStats: [0]apps,[1]accept,[2]enroll,[3]top25perc,[4]phd,[5]s_f_ratio,[6]expend,[7]grad_rate
+    for(let i = 1; i <=8; i++){
+      idvCollegeStats.append(college_info_array[i]);
+    }
+    collegesObject[college_ID] = idvCollegeStats;
   }
 });
 
-fs.writeFileSync('potter.json', JSON.stringify(characters), 'utf8');//generates JSON file
+fs.writeFileSync('colleges.json', JSON.stringify(collegesObject), 'utf8');//generates JSON file
