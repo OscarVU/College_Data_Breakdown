@@ -26,15 +26,6 @@
     <li>Student faculty ratio: <%=stats.s_f_ratio%></li>
     <li>Instructional expenditure per student: <%=stats.expend%></li>
     <li>Graduation Rate: <%=stats.grad_rate%></li>
-    <li>Skill:
-      <% if (stats.skills && stats.skills.length > 0){ %>
-      <ol>
-        <% stats.skills.forEach(function(skill){%>
-        <li> <%=skill%></li>
-        <%}) %>
-      </ol>
-      <%}%>
-    </li>
   </ul>
   </section>
 
