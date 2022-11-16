@@ -10,7 +10,7 @@ let micro_template = fs.readFileSync('views/micro.ejs', 'utf8');
   2) Keep track of the link for index.html
 */
 for (college in college_info){
-  let college_html = ejs.render(college_template, {
+  let college_html = ejs.render(micro_template, {
     filename: __dirname + '/views/micro.ejs',
     stats: college_info[college],
     apps: college_info[college][0],
@@ -32,7 +32,7 @@ for (college in college_info){
   1) Generate an index page of all characters
 */
 
-let macro_html = ejs.render(index_template, {
+let macro_html = ejs.render(macro_template, {
   filename: __dirname + '/views/index.ejs',
 
   data: college_info
