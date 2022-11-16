@@ -19,26 +19,26 @@
     <table>
       <tr>
         <th>Name</th>
+        <th>Applications</th>
+        <th>Acceptances</th>
         <th>Students Enrolled</th>
         <th>Percent of students from top 25% of HS class</th>
-        <th>Species</th>
-        <th>Skill</th>
+        <th>Percent of faculty with PHDs</th>
+        <th>Student faculty ratio</th>
+        <th>Instructional expenditure per student</th>
+        <th>Graduation Rate</th>
       </tr>
-      <% for(character in data){ %>
+      <% for(college in data){ %>
       <tr>
-        <td><a href="<%=data[character].link%>.html"><%= character %></a></td>
-        <td><%= data[character].gender %></td>
-        <td><%= data[character].house %></td>
-        <td><%= data[character].species %></td>
-        <td>
-          <% if (data[character].skills.length > 0){ %>
-          <ol>
-            <% data[character].skills.forEach(function(val){%>
-            <li> <%=val%></li>
-            <%}) %>
-          </ol>
-          <%}%>
-        </td>
+        <td><a href="<%=data[college].link%>.html"><%= college %></a></td>
+        <td><%= data[college].apps %></td>
+        <td><%= data[college].accept %></td>
+        <td><%= data[college].enroll %></td>
+        <td><%= data[college].top25perc %></td>
+        <td><%= data[college].phd %></td>
+        <td><%= data[college].s_f_ratio %></td>
+        <td><%= data[college].expend %></td>
+        <td><%= data[college].grad_rate %></td>
       </tr>
       <%}%>
     </table>
