@@ -12,7 +12,7 @@
     "prebuild" : "echo \"prebuild\" ",
     "build" : "cd data && node generateJSON.js && cd .. && cd src && node siteGenerator.js",
     "postbuild" : "start http://localhost:3000 && node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cd data && node generateJSON.js"
   },
   "author": "",
   "license": "ISC"
