@@ -33,8 +33,7 @@ for (college in college_info){
 */
 
 let macro_html = ejs.render(macro_template, {
-  filename: __dirname + '/views/index.ejs',
-
+  filename: __dirname + '/views/macro.ejs',
   data: college_info
 });
 
