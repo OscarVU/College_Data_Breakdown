@@ -13,14 +13,7 @@ for (college in college_info){
   let college_html = ejs.render(micro_template, {
     filename: __dirname + '/views/micro.ejs',
     stats: college_info[college],
-    apps: college_info[college][0],
-    accept: college_info[college][1],
-    enroll: college_info[college][2],
-    top25perc: college_info[college][3],
-    phd: college_info[college][4],
-    s_f_ratio: college_info[college][5],
-    expend: college_info[college][6],
-    grad_rate: college_info[college][7],
+
     name: college
   });
   college.link = getBetterFileName(college);
