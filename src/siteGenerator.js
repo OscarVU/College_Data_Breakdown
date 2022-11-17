@@ -20,7 +20,7 @@ for (college in college_info){
     phd: college_info[college][4],
     s_f_ratio: college_info[college][5],
     expend: college_info[college][6],
-    gradrate: college_info[college][7],
+    grad_rate: college_info[college][7],
     name: college
   });
   college.link = getBetterFileName(college);
@@ -33,8 +33,7 @@ for (college in college_info){
 */
 
 let macro_html = ejs.render(macro_template, {
-  filename: __dirname + '/views/index.ejs',
-
+  filename: __dirname + '/views/macro.ejs',
   data: college_info
 });
 
