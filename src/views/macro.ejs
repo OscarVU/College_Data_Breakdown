@@ -12,6 +12,7 @@
 </head>
 
 <body>
+  <%- include ('global/header'); %>
   <header>
     <h1>U.S. Colleges</h1>
   </header>
@@ -28,17 +29,17 @@
         <th>Instructional expenditure per student</th>
         <th>Graduation Rate</th>
       </tr>
-      <% for(college in data){ %>
+      <% for(col in data){ %>
       <tr>
         <td><a href="<%=data[college].link%>.html"><%= data[college] %></a></td>
-        <td><%= data[college].apps %></td>
-        <td><%= data[college].accept %></td>
-        <td><%= data[college].enroll %></td>
-        <td><%= data[college].top25perc %></td>
-        <td><%= data[college].phd %></td>
-        <td><%= data[college].s_f_ratio %></td>
-        <td><%= data[college].expend %></td>
-        <td><%= data[college].grad_rate %></td>
+        <td><%= data[col].apps %></td>
+        <td><%= data[col].accept %></td>
+        <td><%= data[col].enroll %></td>
+        <td><%= data[col].top25perc %></td>
+        <td><%= data[col].phd %></td>
+        <td><%= data[col].s_f_ratio %></td>
+        <td><%= data[col].expend %></td>
+        <td><%= data[col].grad_rate %></td>
       </tr>
       <%}%>
     </table>
