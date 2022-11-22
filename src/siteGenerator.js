@@ -16,8 +16,8 @@ for (college in college_info){
 
     name: college
   });
-  //college.link = getBetterFileName(college);
-  fs.writeFileSync('../public/'+name+'.html', college_html, 'utf8');
+  college.link = getBetterFileName(college);
+  fs.writeFileSync('../public/'+college+'.html', college_html, 'utf8');
 
 }
 

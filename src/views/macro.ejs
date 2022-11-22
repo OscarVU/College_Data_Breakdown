@@ -12,6 +12,8 @@
 </head>
 
 <body>
+  <%- include ('global/navbar'); %>
+  <%- include ('global/header'); %>
   <header>
     <h1>U.S. Colleges</h1>
   </header>
@@ -30,7 +32,7 @@
       </tr>
       <% for(col in data){ %>
       <tr>
-        <td><a href="<%=data[college].link%>.html"><%= data[college] %></a></td>
+        <td><a href="<%=col%>.html"><%= col %></a></td>
         <td><%= data[col].apps %></td>
         <td><%= data[col].accept %></td>
         <td><%= data[col].enroll %></td>
