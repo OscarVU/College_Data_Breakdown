@@ -10,7 +10,7 @@ collegeArray.forEach(function(college) {
   let college_info_array = college.split(',');
 
   let college_ID = college_info_array[0];
-  console.log(college_ID);
+
   //adding object values
   if(college_ID != "name"){
 
@@ -28,5 +28,5 @@ collegeArray.forEach(function(college) {
   }
 });
 
-console.log(collegesObject['University 1']);
+
 fs.writeFileSync('colleges.json', JSON.stringify(collegesObject), 'utf8');//generates JSON file
