@@ -23,10 +23,11 @@
   <header style = "text-align:center; padding-top: 10px; font-size: 50px">
     College Admissions and Resources in 2019
   </header>
-  
+
   <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <h1>About Our Project</h1>
+    <p>Our project focuses on four aspects of the admissions process: applications, acceptances, enrollment, and how many of these students were in the top 25% of their high school. We want to be able to compare the selectivity across all 777 universities. Our project also examines three characteristics of the colleges that can be broadly described as "resources": faculty members with a phd, student to faculty ratio, and expenditure on each student. We want to compare the experience at college past the admissions process since it normally recieves less attention in the news than admissions numbers. Finally, we include each school's graduation rate.</p>
     <h2>Understanding the data</h2>
     <table>
       <tr>
@@ -68,16 +69,20 @@
     <h2>Our Lofi Prototypes</h2>
     <h4>Oscar's Macro Sketch</h4>
     <img src="macrolofioscar.jpg" alt="Macro Pic">
-    <p>Design Critique:</p>
+    <h6>Design Critique:</h6>
     <p>In terms of understandability, the graph I drew isn't that understandable
       without additional information written, as I fail to communicate the details of each axis
     and explain what I'm measuring. In terms of signifiers, ideally I'd make each dot clickable
     and link directly to the micro page, but I don't signify that. In terms of comfort, the space of the
     page is compact and provides a comfortable environment for the user. In terms of privacy, we do a pretty
     good job keeping the information private, as no institutional names are disclosed.</p>
+
+    <h6>Elements Selected:</h6>
+    <p>FILL IN</p>
+
     <h4>Oscar's Micro Sketch</h4>
     <img src="microlofioscar.jpg" alt="Micro Pic">
-    <p>Design Critique:</p>
+    <h6>Design Critique:</h6>
     <p>In terms of understandability, I'd say that my sketch is clear in
       communicating its percentages through the geometric/proportional
       representations on the graph. In terms of signifiers, ideally I'd make each
@@ -85,23 +90,40 @@
       over it, but I don't signify that. In terms of comfort, the space of the
       page is compact and provides a comfortable environment for the user. In terms of privacy, we do a pretty
       good job keeping the information private, as we keep the name of the university anonymous.</p>
+
+    <h6>Elements Selected:</h6>
+    <p>FILL IN</p>
+
     <h4>Emmett's Macro Sketch</h4>
     <img src="macrolofiemmett.jpeg" alt="Macro Pic EC">
-    <p>Design Critique:</p>
+    <h6>Design Critique:</h6>
     <p>In terms of understandability, my graph has good visibility in that it includes all categories and data. However,
       it does not have the best simplicity because there is a lot of data on the page. Furthermore, the structure is good
       as it separates the admissions criteria from the college specific information about the faculty, etc. The Graduation
       rate is separate from it all because it is very important. Achievability is not great here simply because of the large
       amount of data, but the graphs themselves are not complex. It is Comfortable and well spaced out, includes Signifiers
       for all the maps, and includes Mapping between the data of different colleges.</p>
+
+    <h6>Elements Selected:</h6>
+    <p>Included all elements from the data table. I put the admissions categories next to each other and the resources ones next to each other for clarity.</p>
+
     <h4>Emmett's Micro Sketch</h4>
     <img src="microlofiemmett.jpeg" alt="Micro Pic EC">
-    <p>Design Critique:</p>
+    <h6>Design Critique:</h6>
     <p>In terms of understandability, my graph has good visibility because all of the information is included
       and it has better simplicity than my macro graph because there's fewer data points to display. Consistency could be better
       as some of my diagrams are pie charts and others are of different styles. Achievability is decent here, but it might
       be difficult to create the $ graphic with a percentage of it shaded in. It is definitely Comfortable more so than the macro
       too, it has signifiers within each diagram, and there is mapping between the "applications" "acceptance" "enrollment" and
       "graduation" and each bar of the bar chart.</p>
+
+    <h6>Elements Selected:</h6>
+    <p>Included all elements from the data except for the top 25% statistic. Different from the macro page, I separated the 3 "resources" categories. The "admissions" categories remain together.</p>
+
+    <h2>Pipeline</h2>
+    <p>prebuild --> build(run generateJSON and siteGenerator) --> postbuilt(open server) --> test(return error or none)</p>
+
+    <h2>Division of Labor</h2>
+    <p>Emmett: generateJSON.js, footer/header/navbar ejs; Oscar: macro/micro ejs, server/transfer js; Together: siteGenerator.js, about.html</p>
   </body>
 </html>
