@@ -9,7 +9,11 @@
         transform: rotate(270deg);
     }
 
-</style>
+  </style>
+  <!--
+  <script src="plotly-2.16.1.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-2.16.1.min.js"></script>
+-->
   </head>
 
   <div>
@@ -26,6 +30,35 @@
 
   <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!--
+    <div id="tester" style="width:600px;height:250px;"></div>
+    <script>
+          var trace1 = {
+        x: [1, 2, 3, 4],
+        y: [10, 15, 13, 17],
+        mode: 'markers',
+        type: 'scatter'
+      };
+
+      var trace2 = {
+        x: [2, 3, 4, 5],
+        y: [16, 5, 11, 9],
+        mode: 'lines',
+        type: 'scatter'
+      };
+
+      var trace3 = {
+        x: [1, 2, 3, 4],
+        y: [12, 9, 15, 12],
+        mode: 'lines+markers',
+        type: 'scatter'
+      };
+
+      var data = [trace1, trace2, trace3];
+
+      Plotly.newPlot('tester', data);
+    </script>
+  -->
     <h1>About Our Project</h1>
     <p>Our project focuses on four aspects of the admissions process: applications, acceptances, enrollment, and how many of these students were in the top 25% of their high school. We want to be able to compare the selectivity across all 777 universities. Our project also examines three characteristics of the colleges that can be broadly described as "resources": faculty members with a phd, student to faculty ratio, and expenditure on each student. We want to compare the experience at college past the admissions process since it normally recieves less attention in the news than admissions numbers. Finally, we include each school's graduation rate.
     Generally, we want to see if these admissions statistics and
