@@ -123,7 +123,7 @@
     <p>Included all elements from the data except for the top 25% statistic. Different from the macro page, I separated the 3 "resources" categories. The "admissions" categories remain together.</p>
 
     <h2>Pipeline</h2>
-    <p>prebuild(clear out all existing files in public and copy over files from src) --> build(run generateJSON and siteGenerator) --> postbuild(open server)</p>
+    <p>prebuild(clear out all existing files in public and copy over files from src) --> build(run generateJSON and siteGenerator, generating the macro and micro html files) --> postbuild(starts the server)</p>
 
     <h2>Division of Labor</h2>
     <p>Emmett: generateJSON.js, footer/header/navbar ejs; Oscar: macro/micro ejs, server/transfer js; Together: siteGenerator.js, about.html</p>
