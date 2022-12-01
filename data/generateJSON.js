@@ -20,7 +20,7 @@ collegeArray.forEach(function(college) {
     expendAvg += parseInt(college_info_array[7]);
     gradrateAvg += parseInt(college_info_array[8]);
   }
-}
+});
 phdAvg = phdAvg/777;
 sfratioAvg = sfratioAvg/777;
 expendAvg = expendAvg/777;

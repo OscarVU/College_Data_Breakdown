@@ -4,6 +4,7 @@ const ejs = require('ejs');
 let college_info = JSON.parse(fs.readFileSync('../data/colleges.json', 'utf8'));//change name to college file
 let macro_template = fs.readFileSync('views/macro.ejs', 'utf8');
 let micro_template = fs.readFileSync('views/micro.ejs', 'utf8');
+let about_template = fs.readFileSync('views/about.ejs', 'utf8');
 
 /*
   1) Generate a web page for each character
@@ -18,9 +19,13 @@ for (college in college_info){
   });
   college.link = getBetterFileName(college);
   fs.writeFileSync('../public/'+college+'.html', college_html, 'utf8');
-
 }
 
+//generating the about page
+let about_html = ejs.render(about_template, {
+  filename: __dirname + '/views/about.ejs'
+});
+fs.writeFileSync('../public/about.html', about_html, 'utf8');
 /*
   1) Generate an index page of all characters
 */

@@ -1,12 +1,33 @@
-<div>
+<div class = "navbar">
 
 
-  <a href= "macro.html" ><div style = "float:left; border: 2px solid black; width: 49.88%">
-    <p style = "margin-top: 8px; text-align: center">Macro Page</p>
-  </div></a>
-  <a href= "../src/about.html" ><div style = "margin-left:50%; float:center; border: 2px solid black;" >
-    <p style = "margin-top: 8px; text-align:center">About Page</p>
-  </div></a>
+  <a href= "macro.html" >Macro Page</a>
+  <a href= "about.html" >About Page</a>
+  <div class = "dropdown">
+  <!--<div class = "dropbtn">-->
+  <button class="dropbtn">Universities 
+   </button>
 
+   <!--<button class="dropbtn-2">Universities 101-200
+    </button>
+    <button class="dropbtn-3">Universities 201-300
+     </button>
+    <button class="dropbtn-4">Universities 301-400
+    </button>
+    <button class="dropbtn-5">Universities 401-500
+    </button>
+    <button class="dropbtn-6">Universities 501-600
+    </button>
+    <button class="dropbtn-7">Universities 601-700
+    </button>
+    <button class="dropbtn-8">Universities 701-777
+    </button>
+    </div> -->
+   <div class = "dropdown-content">
+     <%for(let i=1; i<=777; i++){%>
+       <a href="University <%=i%>.html">University <%=i%></a>
+       <%}%>
 
+</div>
+</div>
 </div>
