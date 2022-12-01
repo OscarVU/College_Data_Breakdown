@@ -35,7 +35,7 @@ let macro_html = ejs.render(macro_template, {
   data: college_info
 });
 
-fs.writeFileSync('../public/macro.html', macro_html, 'utf8');
+fs.writeFileSync('../public/index.html', macro_html, 'utf8');
 
 function getBetterFileName(characterName){
   let betterFileName = characterName.split(" ").join("_");
