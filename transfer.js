@@ -7,8 +7,8 @@ for(college in college_info){
 }
 
 //manually unlinking all other files
-if(fs.existsSync('public/macro.html'))
-fs.unlinkSync('public/macro.html');
+if(fs.existsSync('public/index.html'))
+fs.unlinkSync('public/index.html');
 
 if(fs.existsSync('public/styles.css'))
 fs.unlinkSync('public/styles.css');
