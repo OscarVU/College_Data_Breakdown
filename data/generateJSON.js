@@ -15,10 +15,18 @@ collegeArray.forEach(function(college) {
   let college_info_array = college.split(',');
   let college_ID = college_info_array[0];
   if(college_ID != "name"){
-    phdAvg += parseInt(college_info_array[5]);
-    sfratioAvg += parseInt(college_info_array[6]);
-    expendAvg += parseInt(college_info_array[7]);
-    gradrateAvg += parseInt(college_info_array[8]);
+    let phd = parseInt(college_info_array[5]);
+    let sfratio = parseInt(college_info_array[6]);
+    let expend = parseInt(college_info_array[7]);
+    let gradrate = parseInt(college_info_array[8])
+    if(!(isNaN(phd)))
+      phdAvg += phd;
+    if(!(isNaN(sfratio)))
+      sfratioAvg += sfratio;
+    if(!(isNaN(expend)))
+      expendAvg += expend;
+    if(!(isNaN(gradrate)))
+      gradrateAvg += gradrate;
   }
 });
 phdAvg = phdAvg/777;
@@ -44,7 +52,7 @@ collegeArray.forEach(function(college) {
     idvCollegeStats['expend'] = college_info_array[7]
     idvCollegeStats['grad_rate'] = college_info_array[8]
     idvCollegeStats['accept_rate'] = parseInt(idvCollegeStats['accept'])/parseInt(idvCollegeStats['apps']);
-    idvCollegeStats['inst_avg'] = (parseInt(college_info_array[5])/phdAvg + parseInt(college_info_array[6])/sfratioAvg+parseInt(college_info_array[7])/expendAvg+parseInt(college_info_array[8])/gradrateAvg)/2.19;
+    idvCollegeStats['inst_avg'] = (parseInt(idvCollegeStats['phd'])/phdAvg + parseInt(college_info_array[6])/sfratioAvg+parseInt(college_info_array[7])/expendAvg+parseInt(college_info_array[8])/gradrateAvg)/2.19;
     collegesObject[college_ID] = idvCollegeStats;
   }
 });
