@@ -9,6 +9,8 @@
   <meta content="text/html" http-equiv="Content-type" />
   <meta content="width=device-width, initial-scale=1" name="viewport" />
   <link rel="stylesheet" href="styles.css">
+  <script src="plotly-2.16.1.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-2.16.1.min.js"></script>
 </head>
 
 <body>
@@ -30,7 +32,13 @@
         <th>Instructional expenditure per student</th>
         <th>Graduation Rate</th>
       </tr>
-      <% for(col in data){ %>
+      <% var acceptArray = [];
+         var instArray = [];
+
+         for(col in data){
+           acceptArray.push(data[col].accept_rate);
+           instArray.push(data[col].inst_avg);
+        %>
       <tr>
         <td><a href="<%=col%>.html"><%= col %></a></td>
         <td><%= data[col].apps %></td>
@@ -42,9 +50,28 @@
         <td><%= data[col].expend %></td>
         <td><%= data[col].grad_rate %></td>
       </tr>
+      <div id="tester" style="width:80%;height:35%;"></div>
+      <script>
+        var trace1 = {
+          x: [
+            <%= acceptArray %>
+          ],
+          y: [
+            <%= instArray %>
+          ],
+          mode: 'markers',
+          type: 'scatter'
+        };
+
+        var data = [trace1];
+
+        Plotly.newPlot('tester', data);
+      </script>
       <%}%>
+
     </table>
   </section>
+
 
   <%- include ('global/footer');  %>
 
