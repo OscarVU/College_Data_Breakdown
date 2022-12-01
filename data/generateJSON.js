@@ -44,7 +44,7 @@ collegeArray.forEach(function(college) {
     idvCollegeStats['expend'] = college_info_array[7]
     idvCollegeStats['grad_rate'] = college_info_array[8]
     idvCollegeStats['accept_rate'] = parseInt(idvCollegeStats['accept'])/parseInt(idvCollegeStats['apps']);
-    idvCollegeStats['inst_avg'] = parseInt(college_info_array[5])/phdAvg + parseInt(college_info_array[6])/sfratioAvg+parseInt(college_info_array[7])/expendAvg+parseInt(college_info_array[8])/gradrateAvg;
+    idvCollegeStats['inst_avg'] = (parseInt(college_info_array[5])/phdAvg + parseInt(college_info_array[6])/sfratioAvg+parseInt(college_info_array[7])/expendAvg+parseInt(college_info_array[8])/gradrateAvg)/2.19;
     collegesObject[college_ID] = idvCollegeStats;
   }
 });
