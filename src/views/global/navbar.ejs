@@ -1,75 +1,4 @@
-<!--
-<div class = "navbar">
-
-
-  <a href= "macro.html" >Macro Page</a>
-  <a href= "about.html" >About Page</a>
-  <div class = "dropdown">
-  <div class = "dropbtn">
-
-  <button class="dropbtn">Universities
-   </button>
-
-   <button class="dropbtn-2">Universities 101-200
-    </button>
-    <button class="dropbtn-3">Universities 201-300
-     </button>
-    <button class="dropbtn-4">Universities 301-400
-    </button>
-    <button class="dropbtn-5">Universities 401-500
-    </button>
-    <button class="dropbtn-6">Universities 501-600
-    </button>
-    <button class="dropbtn-7">Universities 601-700
-    </button>
-    <button class="dropbtn-8">Universities 701-777
-    </button>
-    </div>
-   <div class = "dropdown-content">
-
-</div>
-</div>
-</div>
--->
-<!--
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Universities 1-100
-          </a>
-          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
--->
-<!--
-<div class = "navbar">
-<div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-    Dropdown button
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" overflow="visible">
-    <li><a class="dropdown-item" href="#">Action</a ></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
-  </ul>
-</div>
-</div>
--->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">University Data</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -79,10 +8,10 @@
       <ul class="navbar-nav">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Universities
+            Universities 1-200
           </a>
           <ul class="dropdown-menu dropdown-menu-dark">
-            <% for(let i=1; i<=777; i+=1){ %>
+            <% for(let i=1; i<=200; i+=1){ %>
               <li><a class="dropdown-item" href="University <%=i%>.html">University <%=i%></a></li>
               <%}%>
             </ul>
@@ -90,6 +19,51 @@
           </li>
         </ul>
       </div>
+      <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Universities 201-400
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <% for(let i=201; i<=400; i+=1){ %>
+                <li><a class="dropdown-item" href="University <%=i%>.html">University <%=i%></a></li>
+                <%}%>
+              </ul>
+
+            </li>
+          </ul>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Universities 401-600
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <% for(let i=401; i<=600; i+=1){ %>
+                  <li><a class="dropdown-item" href="University <%=i%>.html">University <%=i%></a></li>
+                  <%}%>
+                </ul>
+
+              </li>
+            </ul>
+          </div>
+          <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Universities 601-777
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <% for(let i=601; i<=777; i+=1){ %>
+                    <li><a class="dropdown-item" href="University <%=i%>.html">University <%=i%></a></li>
+                    <%}%>
+                  </ul>
+
+                </li>
+              </ul>
+            </div>
       <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
         <ul class="navbar-nav">
           <li class="nav-item">
