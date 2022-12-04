@@ -1,4 +1,4 @@
-## Harry Potter data from: <https://www.kaggle.com/gulsahdemiryurek/harry-potter-dataset>
+## University data from: <https://www.kaggle.com/datasets/faressayah/college-data>
 
 ## `npm install fs`
 
