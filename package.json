@@ -15,7 +15,8 @@
     "prebuild": "node transfer.js ",
     "build": "cd data && node generateJSON.js && cd .. && cd src && node siteGenerator.js",
     "postbuild": "start http://localhost:3000 && node server.js",
-    "test": "cd data && node generateJSON.js"
+    "test": "cd data && node generateJSON.js",
+    "publish": "git add -f public"
   },
   "author": "",
   "license": "ISC"
