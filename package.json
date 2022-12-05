@@ -16,7 +16,7 @@
     "build": "cd data && node generateJSON.js && cd .. && cd src && node siteGenerator.js",
     "postbuild": "start http://localhost:3000 && node server.js",
     "test": "cd data && node generateJSON.js",
-    "publish": "git commit -a /docs && git push https://github.com/OscarVU/College_Data_Breakdown/ gh-pages" ,
+    "publish": "git add ./docs && git commit && git push https://github.com/OscarVU/College_Data_Breakdown/ main" ,
     "postpublish": "start https://oscarvu.github.io/College_Data_Breakdown/"
   },
   "author": "",
