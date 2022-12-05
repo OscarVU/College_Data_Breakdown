@@ -28,10 +28,14 @@ fs.unlinkSync('docs/macrolofioscar.jpg');
 if(fs.existsSync('docs/microlofioscar.jpg'))
 fs.unlinkSync('docs/microlofioscar.jpg');
 
+if(fs.existsSync('docs/Flowchart.jpeg'))
+fs.unlinkSync('docs/Flowchart.jpeg');
+
 //copying all neccesary files over
 fs.copyFileSync('src/styles.css','docs/styles.css');
 //fs.copyFileSync('src/about.html','docs/about.html');
 fs.copyFileSync('src/macrolofiemmett.jpeg','docs/macrolofiemmett.jpeg');
 fs.copyFileSync('src/microlofiemmett.jpeg','docs/microlofiemmett.jpeg');
+fs.copyFileSync('src/Flowchart.jpeg','docs/Flowchart.jpeg');
 fs.copyFileSync('src/macrolofioscar.jpg','docs/macrolofioscar.jpg');
 fs.copyFileSync('src/microlofioscar.jpg','docs/microlofioscar.jpg');
