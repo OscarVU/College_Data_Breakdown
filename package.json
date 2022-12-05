@@ -16,8 +16,13 @@
     "build": "cd data && node generateJSON.js && cd .. && cd src && node siteGenerator.js",
     "postbuild": "start http://localhost:3000 && node server.js",
     "test": "cd data && node generateJSON.js",
-    "publish": "git add -f public"
+    "publish": "git add ./docs && git commit -m updating gh-pages && git push https://github.com/OscarVU/College_Data_Breakdown gh pages ",
+    "postpublish": "start https://oscarvu.github.io/College_Data_Breakdown/"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "deploy-to-github-pages": "^1.0.1",
+    "gh-pages": "^4.0.0"
+  }
 }
