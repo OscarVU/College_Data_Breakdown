@@ -74,7 +74,29 @@
 
         var data = [trace1];
 
-        Plotly.newPlot('tester', data);
+        var layout = {
+  title: {
+    text:'Instutional Average Vs. Admissions Rate for 777 Universities',
+    font: {
+      family: 'Courier New, monospace',
+      size: 24
+    },
+    xref: 'paper',
+    x: 0.05,
+  },
+  xaxis: {
+    title: {
+      text: 'Admissions Rate'
+    },
+  },
+  yaxis: {
+    title: {
+      text: 'Institutional Average'
+    }
+  }
+};
+
+        Plotly.newPlot('tester', data,layout);
       </script>
       <%}%>
 
