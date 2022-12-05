@@ -18,14 +18,14 @@ for (college in college_info){
     name: college
   });
   college.link = getBetterFileName(college);
-  fs.writeFileSync('../public/'+college+'.html', college_html, 'utf8');
+  fs.writeFileSync('../'+college+'.html', college_html, 'utf8');
 }
 
 //generating the about page
 let about_html = ejs.render(about_template, {
   filename: __dirname + '/views/about.ejs'
 });
-fs.writeFileSync('../public/about.html', about_html, 'utf8');
+fs.writeFileSync('../about.html', about_html, 'utf8');
 /*
   1) Generate an index page of all characters
 */
@@ -35,7 +35,7 @@ let macro_html = ejs.render(macro_template, {
   data: college_info
 });
 
-fs.writeFileSync('../public/index.html', macro_html, 'utf8');
+fs.writeFileSync('../index.html', macro_html, 'utf8');
 
 function getBetterFileName(characterName){
   let betterFileName = characterName.split(" ").join("_");
