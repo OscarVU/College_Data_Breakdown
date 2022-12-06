@@ -87,9 +87,35 @@ title: {
 }
 };
 
+    var phdlayout = {
+
+    title: {
+      text:'Faculty With and Without a Ph.D.',
+      font: {
+      family: 'Courier New, monospace',
+      size: 24
+      },
+      xref: 'paper',
+      x: 0.05,
+      }
+    };
+
+    var sflayout = {
+
+    title: {
+      text:'Student to Faculty Ratio',
+      font: {
+      family: 'Courier New, monospace',
+      size: 24
+      },
+      xref: 'paper',
+      x: 0.05,
+      }
+    };
+
     Plotly.newPlot('admissionsbar', bardata, barlayout);
-    Plotly.newPlot('phdpie', phddata)
-    Plotly.newPlot('sfpie', sfdata)
+    Plotly.newPlot('phdpie', phddata, phdlayout)
+    Plotly.newPlot('sfpie', sfdata, sflayout)
 
   </script>
   <p>
