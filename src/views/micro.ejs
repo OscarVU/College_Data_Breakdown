@@ -31,6 +31,27 @@
     <li>Instructional expenditure per student: <%=stats.expend%></li>
     <li>Graduation Rate: <%=stats.grad_rate%></li>
   </ul>
+  <h3>Qualitative assessment</h3>
+  <%if(parseInt(stats.phd)>parseInt(stats.phdAvg)){%>
+      <p>The number of faculty with PhDs is higher than the overall average</p>
+    <%}else {%>
+      <p>The number of faculty with PhDs is lower than the overall average</p>
+    <%}%>
+    <%if(parseInt(stats.s_f_ratio)>parseInt(stats.sfratioAvg)){%>
+        <p>The student to faculty ratio is higher than the overall average</p>
+      <%}else {%>
+        <p>The student to faculty ratio is lower than the overall average</p>
+      <%}%>
+    <%if(parseInt(stats.expend)>parseInt(stats.expendAvg)){%>
+        <p>The expenditure per student is higher than the overall average</p>
+      <%}else {%>
+        <p>The expenditure per student is lower than the overall average</p>
+      <%}%>
+    <%if(parseInt(stats.grad_rate)>parseInt(stats.gradrateAvg)){%>
+          <p>The graduation rate is higher than the overall average</p>
+        <%}else {%>
+          <p>The graduation rate is lower than the overall average</p>
+        <%}%>
   </section>
   <div id="admissionsbar" style="width:50%;height:50%;"></div>
   <h2>Institutional Statistics:<h2>
